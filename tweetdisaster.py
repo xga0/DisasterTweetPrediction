@@ -135,8 +135,6 @@ lst_test = [re.sub(r'(\d),(\d)', r'\1\2', x) for x in lst_test]
 lst_test = [re.sub('[^A-Za-z0-9]+', ' ', x) for x in lst_test]
 lst_test = [x.lower() for x in lst_test]
 
-sp = en_core_web_sm.load()
-
 lst_test1 = []
 for i in tqdm(lst_test):
     lst_test1.append(lemma(i))
@@ -157,4 +155,4 @@ sub = pd.read_csv(subfilepath)
 
 sub['target'] = y_pred
 
-sub.to_csv('/Users/seangao/Desktop/Research/disaster/nlp-getting-started/submission.csv' ,index=False)
+sub.to_csv('/Users/seangao/Desktop/Research/disaster/nlp-getting-started/submission.csv', index=False)
