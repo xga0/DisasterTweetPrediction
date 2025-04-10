@@ -15,16 +15,19 @@ Kaggle Competition: [Real or Not? NLP with Disaster Tweets](https://www.kaggle.c
 - Comprehensive evaluation metrics (AUROC, Average Precision)
 
 ## Implementations
-### Original Implementation (`tweetdisaster.py`)
+### Original Implementation
+`tweetdisaster.py`
 ![performance](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/master/img/disaster%20tweet.png)
 
 ### PyTorch Implementations
-1. **Basic Implementation** (`tweetdisaster_pt.py`)
+1. **Basic Implementation**
+   `tweetdisaster_pt.py`
    - Standard Bi-LSTM architecture
    - GloVe embeddings (50d)
    - Basic early stopping
 
-2. **Enhanced Implementation with Multi-Head Attention** (`tweetdisaster_attention.py`)
+2. **Enhanced Implementation with Multi-Head Attention**
+   `tweetdisaster_attention.py`
    ![evaluation_curves_enhanced](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/refs/heads/master/img/evaluation_curves_enhanced.png)
    
    **Enhanced Features**:
