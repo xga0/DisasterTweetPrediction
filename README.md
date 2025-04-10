@@ -17,6 +17,7 @@ Kaggle Competition: [Real or Not? NLP with Disaster Tweets](https://www.kaggle.c
 ## Implementations
 ### Original Implementation
 `tweetdisaster.py`
+
 ![performance](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/master/img/disaster%20tweet.png)
 
 ### PyTorch Implementations
