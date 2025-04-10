@@ -15,11 +15,29 @@ Kaggle Competition: [Real or Not? NLP with Disaster Tweets](https://www.kaggle.c
 - Comprehensive evaluation metrics (AUROC, Average Precision)
 
 ## Implementations
-### Original Implementation
+### Original Implementation (`tweetdisaster.py`)
 ![performance](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/master/img/disaster%20tweet.png)
 
-### PyTorch Implementation
-![evaluation_curves](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/refs/heads/master/img/evaluation_curves.png)
+### PyTorch Implementations
+1. **Basic Implementation** (`tweetdisaster_pt.py`)
+   - Standard Bi-LSTM architecture
+   - GloVe embeddings (50d)
+   - Basic early stopping
+
+2. **Enhanced Implementation with Multi-Head Attention** (`tweetdisaster_attention.py`)
+   ![evaluation_curves_enhanced](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/refs/heads/master/img/evaluation_curves_enhanced.png)
+   
+   **Enhanced Features**:
+   - Multi-Head Attention (4 heads)
+   - Layer Normalization
+   - Improved Early Stopping:
+     - Moving Average (3 epochs)
+     - Multiple Metrics (Loss & Accuracy)
+     - Improvement Thresholds (0.001)
+     - Patience (10 epochs)
+   - Learning Rate Scheduling (ReduceLROnPlateau)
+   - Gradient Clipping (max_norm=1.0)
+   - Adam Optimizer (lr=0.001)
 
 ## Requirements
 See `requirements.txt` for detailed package versions.
@@ -30,10 +48,21 @@ See `requirements.txt` for detailed package versions.
    - `glove.6B.50d.txt` (for PyTorch implementation)
 2. Run the script:
    ```bash
+   # Original implementation
+   python tweetdisaster.py
+   
+   # PyTorch implementation
    python tweetdisaster_pt.py
+   
+   # Enhanced implementation with attention
+   python tweetdisaster_attention.py
    ```
 3. Results will be saved as:
-   - `best_model.pth`: Best model weights
-   - `training_results.png`: Training/validation metrics
-   - `evaluation_curves.png`: ROC and PR curves
-   - `evaluation_metrics.json`: Detailed evaluation metrics
+   - `best_model.pth`: Best model weights (original)
+   - `best_model_enhanced.pth`: Best model weights (attention)
+   - `training_results.png`: Training/validation metrics (original)
+   - `training_results_enhanced.png`: Training/validation metrics (attention)
+   - `evaluation_curves.png`: ROC and PR curves (original)
+   - `evaluation_curves_enhanced.png`: ROC and PR curves (attention)
+   - `evaluation_metrics.json`: Detailed evaluation metrics (original)
+   - `evaluation_metrics_enhanced.json`: Detailed evaluation metrics (attention)
