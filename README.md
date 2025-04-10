@@ -19,13 +19,6 @@ Kaggle Competition: [Real or Not? NLP with Disaster Tweets](https://www.kaggle.c
 ![performance](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/master/img/disaster%20tweet.png)
 
 ### PyTorch Implementation
-The PyTorch version includes additional features:
-- Progress bars for training and evaluation
-- Training and validation metrics visualization
-- ROC and Precision-Recall curves
-- Class-weighted loss function for handling imbalanced data
-
-#### Evaluation Curves
 ![evaluation_curves](https://raw.githubusercontent.com/xga0/DisasterTweetPrediction/refs/heads/master/img/evaluation_curves.png)
 
 ## Requirements
